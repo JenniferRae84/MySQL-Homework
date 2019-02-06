@@ -8,8 +8,7 @@ SELECT CONCAT(a.first_name, ' ', a. last_name)
 FROM actor a; 
 
 
--- 2a. You need to find the ID number, first name, and last name of an actor, 
--- of whom you know only the first name, "Joe." What is one query would you use to obtain this information?
+-- 2a. You need to find the ID number, first name, and last name of an actor, of whom you know only the first name, "Joe." What is one query would you use to obtain this information?
 SELECT a.actor_id, a.first_name, a. last_name
 FROM actor a 
 WHERE a.first_name LIKE 'JOE';
@@ -31,9 +30,7 @@ FROM country c
 WHERE c.country IN ('Afghanistan', 'Bangladesh', 'China');
 
 
--- 3a. You want to keep a description of each actor. 
--- You don't think you will be performing queries on a description, 
--- so create a column in the table actor named description and use the data type BLOB 
+-- 3a. You want to keep a description of each actor. You don't think you will be performing queries on a description, so create a column in the table actor named description and use the data type BLOB 
 -- (Make sure to research the type BLOB, as the difference between it and VARCHAR are significant).
 ALTER TABLE actor
 ADD COLUMN actor_description BLOB AFTER last_name;
